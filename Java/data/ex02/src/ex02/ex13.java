@@ -2,7 +2,7 @@ package ex02;
 
 import java.util.Scanner;
 
-public class Ex12 {
+public class ex13 {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -12,22 +12,20 @@ public class Ex12 {
 		int menu = scanner.nextInt();
 		String selectMenu = "";
 		
-		switch(menu) {
-		case 1 : 
-			    selectMenu = "커피";
-				break;
-		case 2 : 
-				selectMenu = "콜라";
-				break;
-		case 3 : 
-		    	selectMenu = "바나나우유";
-		    	break;
-		case 4 : 
-		    	selectMenu = "사이다";
-		    	break;
-		default :
-				System.out.println("메뉴가 없습니다");
-				break;
+		if (menu == 1) {
+			selectMenu = "커피";
+		}
+		else if (menu == 2) {
+			selectMenu = "콜라";
+		}
+		else if (menu == 3) {
+			selectMenu = "바나나우유";
+		}
+		else if (menu == 4){
+			selectMenu = "사이다";
+		}
+		else {
+			System.out.println("선택 메뉴가 없습니다.");
 		}
 		
 		System.out.println("선택메뉴 : " + selectMenu);
