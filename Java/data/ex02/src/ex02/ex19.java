@@ -11,14 +11,16 @@ public class ex19 {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("입금하세요 :");
 		int money = scanner.nextInt();
+		ex19 e19 = new ex19();
 		
 		for (int i = 0; i < i+1 ; i++) {
 			System.out.println("잔액 : " + money);
 			System.out.println("룰렛이 돌아가는 중입니다");
-			int roulette = random.nextInt(2);
+			int roulette = random.nextInt(1);
 			System.out.println("성공시 잔액 두배 // 실패시 잔액 /2");
 			System.out.println("0.홀 1.짝");
 			int playerNum = scanner.nextInt();
+			
 			if(roulette == playerNum) {
 				System.out.println("승리");
 				money *= 2;
