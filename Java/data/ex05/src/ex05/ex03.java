@@ -1,17 +1,18 @@
 package ex05;
 
-import java.util.Iterator;
 import java.util.Scanner;
 
-public class ex01 {
+public class ex03 {
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("단 입력 : ");
-		int inputDan = scanner.nextInt();
+		int numInput = scanner.nextInt();
 		
-		for (int i = 1; i <= 9; i++) {
-			System.out.printf("%d * %d = %d%n",inputDan,i,inputDan*i);
+		int i = 1;
+		while (i <= 9) {
+			System.out.printf("%d * %d = %d%n",numInput,i,numInput*i);
+			i++;
 		}
 	}
 
