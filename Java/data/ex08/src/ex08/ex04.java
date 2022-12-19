@@ -10,7 +10,6 @@ public class ex04 {
 		Scanner scanner = new Scanner(System.in);
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
 		Date todayDate = new Date();
-		String date = sdf.format(todayDate);
 		int money = 0;
 		
 		
@@ -24,21 +23,20 @@ public class ex04 {
 			int menuNum = scanner.nextInt();
 			switch (menuNum) {
 			case 1:
+				todayDate = new Date();
 				System.out.println("입금금액 : ");
 				int deposit = scanner.nextInt();
 				money += deposit;
 				statuString = "입금";
-				todayDate = new Date();
-				list += date + "\t"+deposit +"\t"+"\t"+  statuString +"\t"+"\t"+ money+"\n" ;
+				list += sdf.format(todayDate) + "\t"+deposit +"\t"+"\t"+  statuString +"\t"+"\t"+ money+"\n" ;
 				break;
 			case 2:
+				todayDate = new Date();
 				System.out.println("출금");
 				int withdrwal = scanner.nextInt();
 				money -= withdrwal;
 				statuString = "출금";
-				todayDate = new Date();
-
-				list += date + "\t"+withdrwal +"\t"+"\t"+  statuString +"\t"+"\t"+ money+"\n" ;
+				list += sdf.format(todayDate) + "\t"+withdrwal +"\t"+"\t"+  statuString +"\t"+"\t"+ money+"\n" ;
 				break;
 			case 3:
 				System.out.println("잔고 : " + money);
