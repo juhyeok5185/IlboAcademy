@@ -96,8 +96,8 @@ public class util2 {
 	
 	public void start() {
 		util2 u = new util2();
-		String name = "";// 수험자이름
-		int kor = 0;// 국어점
+		String name = "";
+		int kor = 0;
 		int eng = 0;
 		int math = 0;
 		String grade = "";
