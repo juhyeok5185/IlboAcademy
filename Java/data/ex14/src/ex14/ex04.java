@@ -18,7 +18,7 @@ public class ex04 {
 		int cnt = 0;
 		int bCnt = 0;
 		Date today = new Date();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd hh:mm:ss");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
 		while (run) {
 			if (loginCk) {
@@ -43,7 +43,7 @@ public class ex04 {
 					System.out.println("제목 : ");
 					board.title = scanner.nextLine();
 					if(board.title.length() > 4) {
-						board.splTitle = board.title.substring(0, 4) + "...";
+						board.splTitle = board.title.substring(0, 3)+"...";
 					}
 					else {
 						board.splTitle = board.title;
@@ -54,10 +54,10 @@ public class ex04 {
 					board.boardCnt = bCnt;
 					board.date = sdf.format(today);
 					bCnt++;
-					System.out.println("번호\t제목\t작성자\t조회수\t작성일");
+					System.out.println("번호\t제목\t  작성자\t조회수\t작성일");
 					System.out.println("-------------------------------------");
 					for (int i = 0; i < bCnt; i++) {
-						System.out.printf("%d\t%s\t%s\t%d\t%s\n", arrBoard[i].boardCnt, arrBoard[i].splTitle,
+						System.out.printf("%d\t%6s\t%s\t%d\t%s\n", arrBoard[i].boardCnt, arrBoard[i].splTitle,
 								arrBoard[i].writer, arrBoard[i].view, arrBoard[i].date);
 					}
 					break;
@@ -163,7 +163,6 @@ public class ex04 {
 						System.out.println("번호\t제목\t작성자\t조회수\t작성일");
 						System.out.println("-------------------------------------");
 						for (int i = 0; i < bCnt; i++) {
-							
 							if (arrBoard[i].title.contains(serchTitle)) {
 								System.out.printf("%d\t%s\t%s\t%d\t%s\n", arrBoard[i].boardCnt, arrBoard[i].splTitle,
 										arrBoard[i].writer, arrBoard[i].view, arrBoard[i].date);			

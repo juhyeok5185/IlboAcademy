@@ -1,5 +1,7 @@
 package ex13;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class ex01 {
@@ -10,9 +12,9 @@ public class ex01 {
 		boolean run = true;
 		int cnt = 0;
 		int seq = 0;
-		String[] joinName = new String[10];
-		String[] joinId = new String[10];
-		String[] joinPw = new String[10];
+		List<String> nameList = new ArrayList<>();
+		List<String> idList = new ArrayList<>();
+		List<String> pwList = new ArrayList<>();
 
 		while (true) {
 			if (!loginCk) {
@@ -27,16 +29,16 @@ public class ex01 {
 			case 1:
 				if (!loginCk) {
 					System.out.println("이름 : ");
-					joinName[cnt] = scanner.next();
+					nameList.add(scanner.next());
 					System.out.println("ID : ");
-					joinId[cnt] = scanner.next();
+					idList.add(scanner.next());
 					System.out.println("PW : ");
-					joinPw[cnt] = scanner.next();
+					pwList.add(scanner.next());
 					System.out.println("회원가입완료");
 					cnt++;
 				} else {
 					System.out.println("변경할 비밀번호 : ");
-					joinPw[seq] = scanner.next();
+					pwList.set(seq, scanner.next());
 				}
 				break;
 			case 2:
@@ -46,7 +48,7 @@ public class ex01 {
 					System.out.println("PW : ");
 					String loginPw = scanner.next();
 					for (int i = 0; i < cnt; i++) {
-						if (loginId.equals(joinId[i]) && loginPw.equals(joinPw[i])) {
+						if (loginId.equals(idList.get(i)) && loginPw.equals(pwList.get(i))) {
 							loginCk = true;
 							seq = i;
 							System.out.println("로그인완료");
