@@ -87,7 +87,7 @@ public class Ex01 {
 						String loginPw = ex01Util.stringScanner("Pw : ");
 
 						for (int i = 0; i < arruser.size(); i++) {
-							if (arruser(i).) {
+							if (arruser.get(transferNum)) {
 								islogin = true;
 								index = i;
 								break;
