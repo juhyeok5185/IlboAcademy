@@ -5,7 +5,6 @@ public class ex01 {
 		ScoreDAO scoreDAO = new ScoreDAO();
 		Util util = new Util();
 		boolean run = true;
-		
 		while (run) {
 			int menuNum = util.numberCheck("1.성적등록 2.리스트 3.검색 4.수정 5.종료");
 			switch (menuNum) {
@@ -38,7 +37,6 @@ public class ex01 {
 				System.out.println("없는번호");
 				break;
 			}
-
 		}
 	}
 }
