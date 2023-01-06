@@ -25,24 +25,30 @@ public class test {
 //			}
 //			System.out.println();
 //		}
-		
-		int[][] arrSeat = new int[12][10];
-		for(int i = 0; i < 15; i++) {
-			for (int j = 0; j < 10; j++) {
-				if(j == 3) {
-					System.out.print(" ");
-					System.out.print("ㅁ");
-				}
-				else if(j == 7) {
-					System.out.print(" ");
-					System.out.print("ㅁ");
-				}
-				else {
-					System.out.print("ㅁ");
-				}
+		String[][] arrSeat = new String[7][5];
+		for(int i = 0 , x = 7; i < arrSeat.length; i++ , x--) {
+			for (int j = 0; j < arrSeat[i].length; j++) {
+					arrSeat[i][j] = "□ "+ (j+1) + "호 ";
+					System.out.print(arrSeat[i][j]);
 			}
+			System.out.print("┃ " + x+"층");
 			System.out.println();
 		}
+		
+		int floor = 3;
+		int room = 4;
+		
+		for(int i = 0 , x = 7; i < arrSeat.length; i++ , x--) {
+			for (int j = 0; j < arrSeat[i].length; j++) {
+				if(x == floor && j == room) {					
+					arrSeat[i][j] = "■ "+ (j+1) + "호 ";
+				}
+				System.out.print(arrSeat[i][j]);
+			}
+			System.out.print("┃ " + x+"층");
+			System.out.println();
+		}
+		
 		
 	}
 
